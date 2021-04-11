@@ -14,12 +14,12 @@ model = pickle.load(open("metamodelo.pkl", "rb"))
 def home():
 	return render_template("index.html")
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["POST", "GET"])
 def predict():	
 	if request.method == "POST":
 		data = request.get_json(force=True)
 		int_features = data["input"]
-	else:
+	if request.method == "GET":
 		int_features = [x for x in request.form.values()][0]
 		b = "'input'[]{}:"
 		for char in b:

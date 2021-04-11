@@ -2545,4 +2545,4 @@ curl -d "{\"input\":[[0.8339150074698289,
 -0.4615610341401656 ,
 0.3650269169948949 ,
 0.3650269169948949,
--0.4615610341401656]]}" -H "Content-Type: application/json" -X POST http://127.0.0.1:5000/predict
+-0.4615610341401656]]}" -H "Content-Type: application/json" -X POST https://prediccionsentimientos.herokuapp.com/predict
